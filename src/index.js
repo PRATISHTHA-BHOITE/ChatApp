@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import { Component } from "react"
+import data from "react-dom"
+import Chat from "./Chat"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App()
+{
+  return(
+    <div>
+      <Chat name="Raju" message="How are you?" time="20 minutes ago" url="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"/>
+      <Chat name="John" message="I am fine" time="100 minutes ago" url="https://cdn4.vectorstock.com/i/1000x1000/32/18/user-sign-icon-person-symbol-human-avatar-vector-12693218.jpg"/>
+    </div>
+    
+  )
+}
+
+//outside-->Parent Component
+//inside--> child component
+data.render(<App/>,document.getElementById("root"))
